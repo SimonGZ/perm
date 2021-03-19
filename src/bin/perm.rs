@@ -1,6 +1,6 @@
 use regex::Regex;
 use std::fs;
-use std::io::{self, Read, Write};
+use std::io::{self, Read};
 use std::path::PathBuf;
 use structopt::StructOpt;
 
@@ -67,9 +67,7 @@ fn main() {
     match opt.output {
         Some(outfile) => fs::write(outfile, output_text).expect("Unable to write file."),
         None => {
-            let stdout = io::stdout();
-            let mut handle = io::BufWriter::new(stdout);
-            writeln!(handle, "{}", output_text).expect("Unable to write to buffer.");
+            print!("{}", output_text);
         }
     }
 }
