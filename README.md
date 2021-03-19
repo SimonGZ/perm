@@ -8,7 +8,7 @@ Perm is a command line utility that accepts either a text file or stdin and conv
 Perm is written in Rust and can be installed using cargo.
 
 ```sh
-cargo install perm
+cargo install perm-text
 ```
 
 ## Usage
