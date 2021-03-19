@@ -1,8 +1,15 @@
 [package]
 name = "perm"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["SimonGZ <simong@gmail.com>"]
 edition = "2018"
+description = "A simple tool for curling straight/dumb quotation marks (\"\") and apostrophes (') into their curly/smart (“”’) equivalents."
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/SimonGZ/perm"
+repository = "https://github.com/SimonGZ/perm"
+keywords = ["cli", "text", "quotes", "apostrophes", "curly"]
+categories = ["command-line-utilities", "text-processing"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
