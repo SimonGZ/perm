@@ -10,6 +10,8 @@ homepage = "https://github.com/SimonGZ/perm"
 repository = "https://github.com/SimonGZ/perm"
 keywords = ["cli", "text", "quotes", "apostrophes", "curly"]
 categories = ["command-line-utilities", "text-processing"]
+default-run = "perm"
+
 [[bin]]
 name = "perm"
 
