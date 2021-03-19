@@ -6,8 +6,8 @@ use structopt::StructOpt;
 
 #[derive(StructOpt, Debug)]
 #[structopt(
-    name = "Curling Iron",
-    about = "A simple tool for converting straight/dumb quotes and apostrophes into their smart/curly equivalents."
+    name = "Perm",
+    about = "A simple tool for curling straight/dumb quotation marks (\"\") and apostrophes (') into their curly/smart (“”’) equivalents."
 )]
 struct Opt {
     /// Input file, pass a dash ("-") to receive stdin
