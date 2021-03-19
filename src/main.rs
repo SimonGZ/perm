@@ -17,23 +17,27 @@ struct Opt {
     /// Output file, stdout if not present
     #[structopt(parse(from_os_str))]
     output: Option<PathBuf>,
+
+    /// Straighten quotes instead of curling them
+    #[structopt(short, long)]
+    straighten: bool,
 }
 
-fn replace_apostrophes(text: String, smarten: bool) -> String {
-    if smarten {
+fn replace_apostrophes(text: String, straighten: bool) -> String {
+    if !straighten {
         text.replace("'", "’")
     } else {
         text.replace("’", "'")
     }
 }
 
-fn replace_quotes(text: String, smarten: bool) -> String {
+fn replace_quotes(text: String, straighten: bool) -> String {
     let re_quotes: Regex = Regex::new(r#"([\w,.?!)]|^)(")"#).unwrap();
-    if smarten {
+    if !straighten {
         let half_quoted = re_quotes.replace_all(&text, "$1”");
         half_quoted.replace("\"", "“")
     } else {
-        text.replace("“", "\"").replace("", "\"")
+        text.replace("“", "\"").replace("”", "\"")
     }
 }
 
@@ -56,8 +60,8 @@ fn main() {
         }
     }
 
-    content = replace_apostrophes(content, true);
-    content = replace_quotes(content, true);
+    content = replace_apostrophes(content, opt.straighten);
+    content = replace_quotes(content, opt.straighten);
     let output_text: String = content;
 
     match opt.output {
