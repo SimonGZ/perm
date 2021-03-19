@@ -1,6 +1,6 @@
 [package]
-name = "perm"
-version = "1.0.0"
+name = "perm-text"
+version = "1.0.1"
 authors = ["SimonGZ <simong@gmail.com>"]
 edition = "2018"
 description = "A simple tool for curling straight/dumb quotation marks (\"\") and apostrophes (') into their curly/smart (“”’) equivalents."
